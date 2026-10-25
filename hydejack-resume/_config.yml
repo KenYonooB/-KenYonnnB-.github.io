@@ -4,7 +4,7 @@
 # ========================================================================================
 
 # 站点 URL —— 部署后替换 <your-username> 为你的 GitHub 用户名
-url:                   https://<your-username>.github.io
+url:                   https://<KenYonooB>.github.io
 baseurl:               ''
 
 # 通用设置
