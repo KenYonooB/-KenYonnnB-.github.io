@@ -1,0 +1,180 @@
+# ========================================================================================
+# Hydejack Resume Site - AI Infra 方向
+# 部署方式: GitHub Actions -> GitHub Pages
+# ========================================================================================
+
+# 站点 URL —— 部署后替换 <your-username> 为你的 GitHub 用户名
+url:                   https://kenyonooob.github.io
+baseurl:               ''
+
+# 通用设置
+# ---------------------------------------------------------------------------------------
+lang:                  zh-cn
+title:                 "<你的姓名> | AI Platform Engineer"
+description:           >
+  AI Infra 方向求职简历 —— AI Platform Development Engineer，
+  专注操作系统、C/C++ 与机器学习基础设施。
+tagline:               AI Platform Development Engineer
+keywords:              [AI Infra, AI Platform, C/C++, Operating System, Machine Learning]
+
+# 站点 logo（可选，放一张正方形图片到 assets/img/logo.png）
+# logo:                  /assets/img/logo.png
+
+# 作者信息（需与 _data/authors.yml 中的第一条一致）
+author:
+  name:                <你的姓名>
+  email:               <your-email@example.com>
+  # twitter:             <username>
+
+# 侧边栏导航菜单
+menu:
+  - title:             简历
+    url:               /resume/
+  - title:             关于
+    url:               /about/
+
+# 页脚版权信息
+copyright:             "© 2024 <你的姓名>. All rights reserved."
+
+# 文章永久链接格式
+permalink:             /:categories/:year-:month-:day-:title/
+
+# 分页
+paginate:              10
+paginate_path:         /:num/
+
+# 主题
+# ---------------------------------------------------------------------------------------
+# 方式一（推荐）: GitHub Actions 构建时使用 gem 主题
+theme: jekyll-theme-hydejack
+
+# 方式二（备选）: 如果用 GitHub Pages 原生构建（非 Actions），注释上面 theme，取消下面注释
+# remote_theme: hydecorp/hydejack@v9
+
+# 外观定制
+# ----------------------------------------------------------------------------------------
+accent_image:          /assets/img/sidebar-bg.jpg
+accent_color:          rgb(38,139,210)
+theme_color:           rgb(25,55,71)
+
+# Google Fonts（默认关闭以保护隐私，如需开启取消注释）
+# google_fonts:          Roboto+Slab:700|Noto+Sans:400,400i,700,700i
+# font:                  Noto Sans, Helvetica, Arial, sans-serif
+# font_heading:          Roboto Slab, Helvetica, Arial, sans-serif
+
+defaults:
+  - scope:
+      path:            assets/
+    values:
+      sitemap:         false
+
+kramdown:
+  math_engine:         katex
+  math_engine_opts:    {}
+  footnote_backlink:   '&#x21a9;&#xfe0e;'
+
+# Hydejack 设置
+# ----------------------------------------------------------------------------------------
+hydejack:
+  post_addons:         [about, related, random]
+  project_addons:      [about, other]
+  no_mark_external:    false
+  no_push_state:       false
+  no_drawer:           false
+  no_navbar:           false
+  no_search:           false
+  no_inline_css:       false
+  no_page_style:       false
+  no_break_layout:     true
+  no_toc:              false
+  no_third_column:     false
+  no_large_headings:   false
+  no_structured_data:  false
+  no_theme_color:      false
+  no_breadcrumbs:      false
+  use_lsi:             true
+  cookies_banner:      false
+  advertise:           false
+  hide_dates:          false
+  hide_last_modified:  false
+  dark_mode:
+    always:            false
+    dynamic:           true
+    icon:              true
+  offline:
+    enabled:           false
+    cache_version:     13
+    precache_assets:
+      - /assets/img/swipe.svg
+
+# Collections
+# ----------------------------------------------------------------------------------------
+collections:
+  featured_categories:
+    permalink:         /:name/
+    output:            true
+  featured_tags:
+    permalink:         /tag-:name/
+    output:            true
+  projects:
+    permalink:         /projects/:path/
+    output:            true
+
+# 文件排除/包含
+# ----------------------------------------------------------------------------------------
+exclude:
+  - .jekyll-cache
+  - .sass-cache
+  - .ruby-lsp
+  - .wrangler
+  - '*.toml'
+  - vendor
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - README.md
+include:
+  - _routes.json
+  - .well-known
+
+# 插件
+# ----------------------------------------------------------------------------------------
+plugins:
+  - jekyll-default-layout
+  - jekyll-feed
+  - jekyll-optional-front-matter
+  - jekyll-paginate
+  - jekyll-readme-index
+  - jekyll-redirect-from
+  - jekyll-relative-links
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-titles-from-headings
+  - jekyll-include-cache
+  - jekyll-last-modified-at
+
+# 插件配置
+# ---------------------------------------------------------------------------------------
+optional_front_matter:
+  remove_originals:    true
+
+readme_index:
+  remove_originals:    true
+  with_frontmatter:    true
+
+relative_links:
+  collections:         true
+
+titles_from_headings:
+  strip_title:         true
+  collections:         true
+
+compress_html:
+  comments:            ["<!--", "-->"]
+  clippings:           all
+  endings:             all
+  ignore:
+    envs:              [development]
+
+sass:
+  style:               compressed

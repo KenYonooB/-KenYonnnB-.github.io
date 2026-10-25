@@ -1,0 +1,28 @@
+# 作者信息
+# 必须与 _config.yml 中的 author 字段一致
+# 将 author1 改为你的短名，并填入真实信息
+
+author1:
+  name:              <你的姓名>
+  email:             <your-email@example.com>
+
+  # 关于作者（显示在每篇文章底部和 about 页面）
+  about:             |
+    AI Infra 方向求职者，目标岗位 AI Platform Development Engineer。
+    具备理工科背景与 C 语言基础，正在系统学习操作系统、C/C++ 与机器学习。
+
+  # 头像照片（建议 128x128 或 256x256）
+  picture:
+    path:            https://via.placeholder.com/128x128
+    # srcset:
+    #   1x:            /assets/img/avatar.jpg
+    #   2x:            /assets/img/avatar@2x.jpg
+
+  # 侧边栏社交媒体图标
+  # 取消注释以显示，可调整顺序
+  social:
+    github:          KenYonooB
+    # email:           <your-email@example.com>
+    # linkedin:        <your-linkedin-id>
+    # twitter:         <username>
+    # rss:             https://KenYonooB.github.io/feed.xml
